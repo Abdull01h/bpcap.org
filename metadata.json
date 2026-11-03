@@ -1,0 +1,6 @@
+{
+  "name": "BPCAB - Bakery and Pastry Chefs Assembly Of Bangladesh",
+  "description": "Official website for BPCAB (Bakery and Pastry Chefs Assembly Of Bangladesh, Est. 2019). Fostering excellence in artisanal baking, French pastry, chef certifications and culinary masterclasses in Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

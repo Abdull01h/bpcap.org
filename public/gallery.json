@@ -1,0 +1,56 @@
+[
+  {
+    "id": "g1",
+    "title": "Artisan French Butter Croissants",
+    "titleBn": "আর্টিসান ফ্রেঞ্চ বাটার ক্রস্যান্ট",
+    "category": "Viennoiserie",
+    "categoryBn": "ভিয়েনোয়াজরি",
+    "chef": "Chef Kazi Mamun",
+    "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": "g2",
+    "title": "Multitiered Fondant Wedding Cake",
+    "titleBn": "রয়্যাল ওয়েডিং ফন্ড্যান্ট কেক",
+    "category": "Cake Art",
+    "categoryBn": "কেক আর্ট",
+    "chef": "Chef Nusrat Jahan",
+    "image": "https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": "g3",
+    "title": "Natural Wild Yeast Sourdough Boule",
+    "titleBn": "ন্যাচারাল ওয়াইল্ড ইস্ট সাওয়ারডো ব্রেড",
+    "category": "Artisan Bread",
+    "categoryBn": "সাওয়ারডো",
+    "chef": "Chef S. M. Farhan",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": "g4",
+    "title": "Handcrafted Bonbon Chocolatier",
+    "titleBn": "হ্যান্ডক্রাফটেড চকলেট বনবন",
+    "category": "Chocolatier",
+    "categoryBn": "চকলেটিয়ার",
+    "chef": "Chef Aminul Islam",
+    "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": "g5",
+    "title": "French Strawberry Fraisier Patisserie",
+    "titleBn": "ফ্রেঞ্চ ফ্রেইসিয়ার ডেজার্ট",
+    "category": "Patisserie",
+    "categoryBn": "প্যাটিসারি",
+    "chef": "Chef Sonia Rahman",
+    "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    "id": "g6",
+    "title": "Golden Pistachio Brioche Loaf",
+    "titleBn": "গোল্ডেন পেস্তা ব্রিয়োশ লোফ",
+    "category": "Viennoiserie",
+    "categoryBn": "ভিয়েনোয়াজরি",
+    "chef": "Chef Tariqul Islam",
+    "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&auto=format&fit=crop&q=80"
+  }
+]

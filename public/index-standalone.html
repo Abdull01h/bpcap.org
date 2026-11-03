@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPCAB - Bakery and Pastry Chefs Assembly Of Bangladesh | Est. 2019</title>
+  <meta name="description" content="Official website of Bakery & Pastry Chefs Assembly Of Bangladesh (BPCAB). Promoting excellence in artisanal baking, French pastry, cake artistry and culinary education in Bangladesh since 2019.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+    .page-section { display: none; }
+    .page-section.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .gold-gradient {
+      background: linear-gradient(135deg, #d97706 0%, #fbbf24 50%, #b45309 100%);
+    }
+  </style>
+</head>
+<body class="bg-[#0b0d11] text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950 flex flex-col min-h-screen justify-between">
+
+  <!-- Top Ribbon -->
+  <div class="bg-gradient-to-r from-amber-700 via-amber-500 to-amber-700 text-slate-950 text-xs py-2 px-4 font-extrabold border-b border-amber-300/40 shadow-sm text-center">
+    <div class="max-w-6xl mx-auto flex items-center justify-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+      <span id="txt-ribbon" class="tracking-wider uppercase text-[11px] sm:text-xs font-bold">
+        National Assembly of Professional Pastry Chefs &amp; Bakers · Est. 2019
+      </span>
+    </div>
+  </div>
+
+  <!-- Header with Navigation and Three-Dot Menu (⋮) -->
+  <header class="sticky top-0 z-40 bg-[#12151c]/95 backdrop-blur-md border-b border-white/10 shadow-xl">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo & Title (Circular mask with no square edges, safe fallback) -->
+      <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center gap-3 group text-left">
+        <div class="w-12 h-12 rounded-full bg-black border-2 border-amber-400 shadow-md flex items-center justify-center p-0.5 shrink-0 overflow-hidden">
+          <img id="header-logo" src="data:image/webp;base64,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" onerror="showDefaultLogo(this)" alt="BPCAB Logo" class="w-full h-full object-contain rounded-full">
+        </div>
+        <div>
+          <span class="font-extrabold text-xl sm:text-2xl tracking-wider text-white font-['Montserrat'] flex items-center gap-1">
+            BPCAB<span class="text-amber-400">.</span>
+          </span>
+          <span id="txt-brand-sub" class="block text-[10px] sm:text-[11px] font-semibold text-amber-300/90 tracking-wider uppercase -mt-1 line-clamp-1">
+            Bakery &amp; Pastry Chefs Assembly Of Bangladesh
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Tabs -->
+      <nav class="hidden lg:flex items-center gap-1 text-xs font-bold text-slate-300 bg-white/5 p-1 rounded-2xl border border-white/10">
+        <button onclick="switchPage('home')" id="tab-home" class="nav-tab px-3.5 py-2 rounded-xl transition bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-extrabold shadow">Home</button>
+        <button onclick="switchPage('about')" id="tab-about" class="nav-tab px-3.5 py-2 rounded-xl transition hover:text-white hover:bg-white/5">About Us</button>
+        <button onclick="switchPage('programs')" id="tab-programs" class="nav-tab px-3.5 py-2 rounded-xl transition hover:text-white hover:bg-white/5">Masterclasses</button>
+        <button onclick="switchPage('membership')" id="tab-membership" class="nav-tab px-3.5 py-2 rounded-xl transition hover:text-white hover:bg-white/5">Membership</button>
+        <button onclick="switchPage('gallery')" id="tab-gallery" class="nav-tab px-3.5 py-2 rounded-xl transition hover:text-white hover:bg-white/5">Showcase</button>
+        <button onclick="switchPage('contact')" id="tab-contact" class="nav-tab px-3.5 py-2 rounded-xl transition hover:text-white hover:bg-white/5">Contact</button>
+      </nav>
+
+      <!-- Right Action & Three-Dot Menu (⋮) -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="switchPage('membership')" id="btn-header-apply" class="hidden sm:inline-flex px-4 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 shadow transition cursor-pointer">
+          Apply Member
+        </button>
+
+        <!-- THREE-DOT MENU BUTTON (⋮) -->
+        <button onclick="toggleMenu()" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 transition flex items-center gap-1.5 cursor-pointer" title="Menu">
+          <span class="text-lg leading-none font-extrabold text-amber-400">⋮</span>
+          <span id="txt-menu-label" class="text-xs font-extrabold hidden sm:inline">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- THREE-DOT SLIDE OVER DRAWER -->
+  <div id="drawerMenu" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-full max-w-sm bg-[#13161c] h-full p-6 shadow-2xl border-l border-white/10 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <!-- Drawer Header -->
+        <div class="flex items-center justify-between pb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-black border border-amber-400 overflow-hidden flex items-center justify-center p-0.5">
+              <img id="drawer-logo" src="data:image/webp;base64,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" onerror="showDefaultLogo(this)" alt="Logo" class="w-full h-full object-contain rounded-full">
+            </div>
+            <span class="font-extrabold text-sm text-white font-['Montserrat']">BPCAB MENU</span>
+          </div>
+          <button onclick="toggleMenu()" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 cursor-pointer">✕</button>
+        </div>
+
+        <!-- Language Selector Section inside Three-Dot Menu (Default: English) -->
+        <div class="py-4 border-b border-white/10">
+          <span class="text-[10px] uppercase font-extrabold text-amber-400 tracking-widest block mb-2 px-1 flex items-center gap-1.5">
+            🌐 <span id="txt-drawer-lang-title">Select Language / ভাষা</span>
+          </span>
+          <div class="grid grid-cols-2 gap-2">
+            <button id="langBtnEn" onclick="setLanguage('en')" class="py-2.5 px-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 border bg-amber-400 text-slate-950 border-amber-300 font-extrabold shadow-md cursor-pointer">
+              English (Default)
+            </button>
+            <button id="langBtnBn" onclick="setLanguage('bn')" class="py-2.5 px-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 border bg-white/5 hover:bg-white/10 text-slate-300 border-white/10 cursor-pointer">
+              বাংলা (Bengali)
+            </button>
+          </div>
+        </div>
+
+        <!-- Page Links Navigation -->
+        <div class="py-5 space-y-2">
+          <span id="txt-drawer-nav-title" class="text-[10px] font-extrabold text-amber-400 uppercase tracking-widest block mb-2 px-3">
+            Pages &amp; Sections
+          </span>
+          <button onclick="switchPage('home'); toggleMenu();" class="w-full text-left p-3 rounded-xl text-xs font-bold bg-white/5 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-between cursor-pointer">
+            <span id="nav-d-home">🏠 Home</span> <span>→</span>
+          </button>
+          <button onclick="switchPage('about'); toggleMenu();" class="w-full text-left p-3 rounded-xl text-xs font-bold bg-white/5 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-between cursor-pointer">
+            <span id="nav-d-about">ℹ️ About Us</span> <span>→</span>
+          </button>
+          <button onclick="switchPage('programs'); toggleMenu();" class="w-full text-left p-3 rounded-xl text-xs font-bold bg-white/5 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-between cursor-pointer">
+            <span id="nav-d-programs">📚 Masterclasses &amp; Academy</span> <span>→</span>
+          </button>
+          <button onclick="switchPage('membership'); toggleMenu();" class="w-full text-left p-3 rounded-xl text-xs font-bold bg-white/5 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-between cursor-pointer">
+            <span id="nav-d-membership">📜 Membership Registration</span> <span>→</span>
+          </button>
+          <button onclick="switchPage('gallery'); toggleMenu();" class="w-full text-left p-3 rounded-xl text-xs font-bold bg-white/5 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-between cursor-pointer">
+            <span id="nav-d-gallery">🖼️ Pastry Art Showcase</span> <span>→</span>
+          </button>
+          <button onclick="switchPage('contact'); toggleMenu();" class="w-full text-left p-3 rounded-xl text-xs font-bold bg-white/5 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-between cursor-pointer">
+            <span id="nav-d-contact">📍 Secretariat &amp; Contact</span> <span>→</span>
+          </button>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-white/10 text-center text-xs text-slate-400 space-y-1">
+        <p class="font-bold text-slate-200">Hotline: <span id="txt-drawer-hotline">+880 1711-234567</span></p>
+        <p class="text-[11px] text-slate-400" id="txt-drawer-address">Gulshan-2, Dhaka 1212, Bangladesh</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN DYNAMIC CONTENT CONTAINER -->
+  <main class="flex-1">
+
+    <!-- PAGE 1: HOME -->
+    <div id="page-home" class="page-section active">
+      <section class="relative overflow-hidden py-16 sm:py-24 px-4 border-b border-white/10">
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1600&auto=format&fit=crop&q=80" alt="Bakery Background" class="w-full h-full object-cover filter brightness-25">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0b0d11] via-[#0b0d11]/80 to-transparent"></div>
+        </div>
+        <div class="max-w-6xl mx-auto relative z-10">
+          <div class="max-w-3xl text-center sm:text-left">
+            <span class="inline-block bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-5">
+              ✨ ESTABLISHED 2019 · OFFICIAL NATIONAL GUILD
+            </span>
+            <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-5 leading-tight">
+              Elevating Bangladesh's <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">Baking &amp; Pastry</span> Artistry
+            </h1>
+            <p id="hero-desc" class="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed max-w-2xl">
+              Since 2019, BPCAB is the apex professional body uniting executive five-star pastry chefs, artisan sourdough bakers, cafe entrepreneurs, and home baking pioneers across Bangladesh.
+            </p>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3.5">
+              <button onclick="switchPage('membership')" id="hero-btn-apply" class="px-6 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 shadow-xl transition cursor-pointer">
+                Apply for Membership
+              </button>
+              <button onclick="switchPage('programs')" id="hero-btn-master" class="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/20 border border-white/20 transition cursor-pointer">
+                Explore Masterclasses
+              </button>
+              <button onclick="switchPage('about')" id="hero-btn-about" class="px-5 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-amber-300 hover:text-white transition cursor-pointer">
+                About BPCAB →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- President Address Box -->
+      <section class="py-14 bg-[#13161c] border-b border-white/10 px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="bg-[#181d26] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-xl flex flex-col md:flex-row items-center gap-6">
+            <div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-amber-400 shrink-0 bg-black">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&auto=format&fit=crop&q=80" alt="President" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span id="txt-pres-tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">President's Message</span>
+              <h3 id="txt-pres-quote" class="text-lg sm:text-xl font-bold text-white mb-2">“Baking is not merely a profession; it is precision, science, and a national identity.”</h3>
+              <p id="txt-pres-body" class="text-xs sm:text-sm text-slate-300 mb-2 leading-relaxed">
+                As the national assembly of Bangladesh's baking and pastry professionals, our primary objective is to elevate our artisans to world-class standards through certified training, modern food science, and creative innovation.
+              </p>
+              <p id="txt-pres-name" class="text-xs font-bold text-amber-300">— Chef Kazi Anowar Hossain, President of BPCAB</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guild Pillars Section -->
+      <section class="py-14 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-10">
+          <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Core Mission</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Foundational Pillars of BPCAB</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-[#14171f] p-6 rounded-3xl border border-white/10 hover:border-amber-400/40 transition">
+            <span class="text-3xl block mb-3">🥐</span>
+            <h3 class="font-bold text-white text-base mb-2">Artisanal Standards</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Promoting wild-yeast sourdoughs, authentic French laminated doughs, and pure butter baking traditions throughout Bangladesh.</p>
+          </div>
+          <div class="bg-[#14171f] p-6 rounded-3xl border border-white/10 hover:border-amber-400/40 transition">
+            <span class="text-3xl block mb-3">🎓</span>
+            <h3 class="font-bold text-white text-base mb-2">Masterclass Education</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Continuous professional development, food safety compliance, and hands-on diplomas taught by five-star executive chefs.</p>
+          </div>
+          <div class="bg-[#14171f] p-6 rounded-3xl border border-white/10 hover:border-amber-400/40 transition">
+            <span class="text-3xl block mb-3">🌍</span>
+            <h3 class="font-bold text-white text-base mb-2">Global Competitions</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Preparing and sponsoring Bangladeshi pastry artists for international pastry cups, cake championships, and culinary Olympiads.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 2: ABOUT US -->
+    <div id="page-about" class="page-section">
+      <section class="py-16 max-w-6xl mx-auto px-4">
+        <div class="max-w-3xl mb-12">
+          <span id="about-tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider">Our Heritage</span>
+          <h2 id="about-title" class="text-3xl sm:text-4xl font-extrabold text-white mt-2">The Story &amp; Purpose of BPCAB</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+            Founded in 2019 in Dhaka, the Bakery and Pastry Chefs Assembly Of Bangladesh (BPCAB) was established to unify professional bakers, chocolatiers, and pastry innovators into a structured national guild.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div class="bg-[#14171f] p-8 rounded-3xl border border-white/10">
+            <span class="text-3xl block mb-3">🎯</span>
+            <h3 id="about-v-title" class="text-xl font-bold text-white mb-2">Our Vision</h3>
+            <p id="about-v-desc" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              To position Bangladesh as a recognized hub of pastry artistry and culinary craftsmanship in South Asia, where every pastry professional achieves dignity, skill certification, and global recognition.
+            </p>
+          </div>
+          <div class="bg-[#14171f] p-8 rounded-3xl border border-white/10">
+            <span class="text-3xl block mb-3">⚡</span>
+            <h3 id="about-m-title" class="text-xl font-bold text-white mb-2">Our Mission</h3>
+            <p id="about-m-desc" class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              To nurture homegrown talent through hands-on masterclasses, standardize hygiene &amp; food safety across bakeries, and advocate for quality natural baking ingredients nationwide.
+            </p>
+          </div>
+        </div>
+
+        <!-- Executive Committee -->
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-6">Executive Leadership</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-[#14171f] rounded-2xl p-5 border border-white/10 text-center">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover border-2 border-amber-400">
+              <h4 class="font-bold text-white text-sm">Chef Kazi Anowar</h4>
+              <p class="text-[11px] text-amber-400">President &amp; Founder</p>
+            </div>
+            <div class="bg-[#14171f] rounded-2xl p-5 border border-white/10 text-center">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover border-2 border-amber-400">
+              <h4 class="font-bold text-white text-sm">Chef Nusrat Jahan</h4>
+              <p class="text-[11px] text-amber-400">Vice President (Pastry)</p>
+            </div>
+            <div class="bg-[#14171f] rounded-2xl p-5 border border-white/10 text-center">
+              <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=300" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover border-2 border-amber-400">
+              <h4 class="font-bold text-white text-sm">Chef Tariqul Islam</h4>
+              <p class="text-[11px] text-amber-400">General Secretary</p>
+            </div>
+            <div class="bg-[#14171f] rounded-2xl p-5 border border-white/10 text-center">
+              <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=300" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover border-2 border-amber-400">
+              <h4 class="font-bold text-white text-sm">Chef Sabrina Karim</h4>
+              <p class="text-[11px] text-amber-400">Director of Education</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 3: MASTERCLASSES & ACADEMY -->
+    <div id="page-programs" class="page-section">
+      <section class="py-16 max-w-6xl mx-auto px-4">
+        <div class="max-w-3xl mb-12">
+          <span id="prog-tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider">Executive Training</span>
+          <h2 id="prog-title" class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Masterclasses &amp; Certification</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+            Hands-on professional culinary bootcamps led by international guest masters and Bangladesh's top executive pastry chefs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[#14171f] rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 transition">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <span class="text-[10px] font-extrabold px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full border border-amber-400/30">LEVEL 3 DIPLOMA</span>
+              <h3 class="text-lg font-bold text-white mt-3">French Lamination &amp; Viennoiserie</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">Croissant dough temperatures, butter folding techniques, pain au chocolat, kouign-amann, and advanced lamination mechanics.</p>
+              <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
+                <span class="text-slate-400">Duration: 4 Weeks</span>
+                <button onclick="switchPage('membership')" class="text-amber-400 font-bold hover:underline cursor-pointer">Register Interest →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#14171f] rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 transition">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=800" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <span class="text-[10px] font-extrabold px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full border border-amber-400/30">MASTER ARTISTRY</span>
+              <h3 class="text-lg font-bold text-white mt-3">Advanced Wedding Cake &amp; Sugar Floristry</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">Structural tiered engineering, wafer paper flowers, delicate gum paste botanicals, and velvety smooth ganache contouring.</p>
+              <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
+                <span class="text-slate-400">Duration: 2 Weeks</span>
+                <button onclick="switchPage('membership')" class="text-amber-400 font-bold hover:underline cursor-pointer">Register Interest →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#14171f] rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 transition">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <span class="text-[10px] font-extrabold px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full border border-amber-400/30">ARTISAN FERMENTATION</span>
+              <h3 class="text-lg font-bold text-white mt-3">Wild Yeast Sourdough &amp; Ancient Grains</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">Starter microbiology, baker's percentages, long cold autolyse, scoring patterns, and open-crumb hearth baking.</p>
+              <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
+                <span class="text-slate-400">Duration: 3 Weeks</span>
+                <button onclick="switchPage('membership')" class="text-amber-400 font-bold hover:underline cursor-pointer">Register Interest →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#14171f] rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 transition">
+            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <span class="text-[10px] font-extrabold px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full border border-amber-400/30">CHOCOLATIER</span>
+              <h3 class="text-lg font-bold text-white mt-3">Couverture Tempering &amp; Molded Bonbons</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">Cocoa butter spraying, crystallization curves, ganache emulsions, pâte de fruit, and high-gloss polycarbonate molding.</p>
+              <div class="mt-4 pt-4 border-t border-white/10 flex justify-between items-center text-xs">
+                <span class="text-slate-400">Duration: 2 Weeks</span>
+                <button onclick="switchPage('membership')" class="text-amber-400 font-bold hover:underline cursor-pointer">Register Interest →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 4: MEMBERSHIP -->
+    <div id="page-membership" class="page-section">
+      <section class="py-16 max-w-6xl mx-auto px-4">
+        <div class="max-w-3xl mb-12">
+          <span id="mem-tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider">Join The Guild</span>
+          <h2 id="mem-title" class="text-3xl sm:text-4xl font-extrabold text-white mt-2">BPCAB Membership Registration</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+            Gain official recognition, networking with five-star hotel pastry chefs, priority access to international masterclasses, and guild member credentials.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Form -->
+          <div class="lg:col-span-2 bg-[#14171f] p-6 sm:p-8 rounded-3xl border border-white/10">
+            <h3 class="text-xl font-bold text-white mb-6">Membership Application Form</h3>
+            <form onsubmit="handleApply(event)" class="space-y-5 text-xs sm:text-sm">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label id="lbl-name" class="block font-bold text-slate-300 mb-1.5">Full Name *</label>
+                  <input type="text" required placeholder="e.g. Chef Tanvir Ahmed" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                  <label id="lbl-phone" class="block font-bold text-slate-300 mb-1.5">Phone / WhatsApp *</label>
+                  <input type="tel" required placeholder="+880 1711-xxxxxx" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label id="lbl-cat" class="block font-bold text-slate-300 mb-1.5">Membership Category *</label>
+                  <select class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+                    <option>Executive Pastry Chef (Hotel/Resort)</option>
+                    <option>Artisan Bakery Entrepreneur / Cafe Owner</option>
+                    <option>Cake Designer &amp; Home Baker</option>
+                    <option>Pastry &amp; Culinary Student Apprentice</option>
+                  </select>
+                </div>
+                <div>
+                  <label id="lbl-bakery" class="block font-bold text-slate-300 mb-1.5">Bakery / Hotel Name (If applicable)</label>
+                  <input type="text" placeholder="e.g. Le Parisien / Artisan Bakehouse" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-bold text-slate-300 mb-1.5">Years of Experience in Pastry / Baking</label>
+                <input type="text" placeholder="e.g. 5 Years" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" id="btn-submit-app" class="w-full py-4 rounded-xl gold-gradient text-slate-950 font-black text-sm shadow-xl hover:brightness-110 transition cursor-pointer">
+                  Submit Membership Application
+                </button>
+              </div>
+              <p id="app-success" class="text-center text-xs font-bold text-emerald-400 hidden">
+                ✅ Application received! Our secretariat will contact you within 24 hours.
+              </p>
+            </form>
+          </div>
+
+          <!-- Benefits Card -->
+          <div class="bg-[#181d26] p-6 sm:p-8 rounded-3xl border border-amber-400/30 flex flex-col justify-between">
+            <div>
+              <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-2">Member Privileges</span>
+              <h3 class="text-xl font-bold text-white mb-4">Why Join BPCAB?</h3>
+              <ul class="space-y-3.5 text-xs text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 font-bold">✓</span>
+                  <span>Official National ID Card &amp; Wall Certificate</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 font-bold">✓</span>
+                  <span>Discounts on European butter, chocolate &amp; flours through guild trade partnerships</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 font-bold">✓</span>
+                  <span>Free entry to Annual Bangladesh Pastry Convention</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-400 font-bold">✓</span>
+                  <span>Exclusive Masterclass invitations with French &amp; Italian guest chefs</span>
+                </li>
+              </ul>
+            </div>
+            <div class="pt-6 border-t border-white/10 text-xs text-slate-400">
+              <p class="font-bold text-white">General Inquiries:</p>
+              <p id="txt-member-hotline">+880 1711-234567</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 5: SHOWCASE / GALLERY -->
+    <div id="page-gallery" class="page-section">
+      <section class="py-16 max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <span id="gal-tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider">Culinary Artistry</span>
+            <h2 id="gal-title" class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Pastry &amp; Bakery Showcase</h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-2">Handcrafted masterpieces created by BPCAB executive members across Bangladesh</p>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap gap-2 mb-8" id="galleryCategoryFilters">
+          <button onclick="filterGallery('All')" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 font-extrabold shadow cursor-pointer">All Categories</button>
+          <button onclick="filterGallery('Viennoiserie')" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer">Viennoiserie</button>
+          <button onclick="filterGallery('Cake Art')" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer">Cake Art</button>
+          <button onclick="filterGallery('Artisan Bread')" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer">Artisan Bread</button>
+          <button onclick="filterGallery('Chocolatier')" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer">Chocolatier</button>
+          <button onclick="filterGallery('Patisserie')" class="gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer">Patisserie</button>
+        </div>
+
+        <!-- Dynamic Public Gallery Grid -->
+        <div id="publicGalleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 6: SECRETARIAT & CONTACT -->
+    <div id="page-contact" class="page-section">
+      <section class="py-16 max-w-6xl mx-auto px-4">
+        <div class="max-w-3xl mb-12">
+          <span id="con-tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider">Secretariat Headquarters</span>
+          <h2 id="con-title" class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Contact BPCAB Secretariat</h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+            Reach our administrative officers for masterclass registrations, brand sponsorships, membership verifications, and corporate guild partnerships.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Info Details Box -->
+          <div class="bg-[#14171f] p-6 sm:p-8 rounded-3xl border border-white/10 space-y-6">
+            <div>
+              <span id="lbl-hq" class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">Official Address / Location</span>
+              <p id="txt-contact-address" class="text-white text-sm font-semibold leading-relaxed">
+                House 42, Road 11, Block D, Banani / Gulshan-2, Dhaka 1213, Bangladesh
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10">
+              <span id="lbl-hotline" class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">Guild Hotline</span>
+              <p id="txt-contact-hotline" class="text-white text-base font-bold font-mono">+880 1711-234567</p>
+              <p class="text-[11px] text-slate-400 mt-0.5">Saturday – Thursday: 9:00 AM – 6:00 PM</p>
+            </div>
+            <div class="pt-4 border-t border-white/10">
+              <span id="lbl-email" class="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">Official Email</span>
+              <p id="txt-contact-email" class="text-white text-sm font-mono">secretariat@bpcab.org.bd</p>
+            </div>
+            <div class="pt-4 border-t border-white/10 text-xs text-slate-400">
+              <span class="text-amber-400 font-bold block mb-1">Registration Status:</span>
+              <p>Registered Non-Profit Culinary Guild of Bangladesh · Est. 2019</p>
+            </div>
+          </div>
+
+          <!-- Contact Message Form -->
+          <div class="lg:col-span-2 bg-[#181d26] p-6 sm:p-8 rounded-3xl border border-white/10">
+            <h3 class="text-xl font-bold text-white mb-6">Send a Message to the Secretariat</h3>
+            <form onsubmit="handleContact(event)" class="space-y-4 text-xs sm:text-sm">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-bold text-slate-300 mb-1.5">Your Name *</label>
+                  <input type="text" required placeholder="e.g. Chef / Guest" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                  <label class="block font-bold text-slate-300 mb-1.5">Contact Email *</label>
+                  <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+                </div>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-300 mb-1.5">Subject</label>
+                <input type="text" placeholder="e.g. Masterclass Enrollment / Partnership" class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400">
+              </div>
+              <div>
+                <label class="block font-bold text-slate-300 mb-1.5">Message / Inquiry *</label>
+                <textarea rows="4" required placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl bg-black/60 border border-white/15 text-white focus:outline-none focus:border-amber-400"></textarea>
+              </div>
+              <button type="submit" class="px-8 py-3.5 rounded-xl gold-gradient text-slate-950 font-black text-sm shadow-xl hover:brightness-110 transition cursor-pointer">
+                Send Message
+              </button>
+              <p id="con-success" class="text-xs font-bold text-emerald-400 hidden">
+                ✅ Your message has been dispatched to the secretariat.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Clean Footer with Dynamic Contact Info -->
+  <footer class="bg-[#0e1117] border-t border-white/10 pt-12 pb-8 px-4 text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="md:col-span-2 space-y-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-black border border-amber-400 overflow-hidden flex items-center justify-center p-0.5">
+            <img id="footer-logo" src="data:image/webp;base64,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" onerror="showDefaultLogo(this)" alt="BPCAB" class="w-full h-full object-contain rounded-full">
+          </div>
+          <span class="font-bold text-white text-sm font-['Montserrat']">BPCAB BANGLADESH</span>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed max-w-sm" id="txt-footer-desc">
+          Bakery &amp; Pastry Chefs Assembly Of Bangladesh — apex national guild advocating professional bakery excellence, artisanal French pastry, and culinary safety since 2019.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+        <ul class="space-y-2 text-slate-400">
+          <li><button onclick="switchPage('home')" class="hover:text-amber-400 transition cursor-pointer">Home Overview</button></li>
+          <li><button onclick="switchPage('about')" class="hover:text-amber-400 transition cursor-pointer">About Our Guild</button></li>
+          <li><button onclick="switchPage('programs')" class="hover:text-amber-400 transition cursor-pointer">Masterclass Schedule</button></li>
+          <li><button onclick="switchPage('membership')" class="hover:text-amber-400 transition cursor-pointer">Apply for Membership</button></li>
+          <li><button onclick="switchPage('gallery')" class="hover:text-amber-400 transition cursor-pointer">Pastry Showcase</button></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Headquarters</h4>
+        <p class="text-slate-400 leading-relaxed mb-2" id="txt-footer-address">
+          House 42, Road 11, Block D, Banani / Gulshan-2, Dhaka 1213, Bangladesh
+        </p>
+        <p class="font-bold text-slate-200" id="txt-footer-hotline">Hotline: +880 1711-234567</p>
+        <p class="text-slate-400 font-mono mt-1" id="txt-footer-email">secretariat@bpcab.org.bd</p>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+      <p>© 2019 – 2026 Bakery &amp; Pastry Chefs Assembly Of Bangladesh (BPCAB). All rights reserved.</p>
+      <p>National Guild of Artisanal Bakers &amp; Pastry Chefs</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC: TRANSLATION, CONFIG & REAL-TIME SYNC -->
+  <script>
+    // Official Prestigious Vector Crest Fallback (Guaranteed to render crisp and round, no white square)
+    const DEFAULT_LOGO_SVG = "data:image/svg+xml;utf8," + encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+        <circle cx="100" cy="100" r="96" fill="#0b0e14" stroke="#fbbf24" stroke-width="5"/>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <path d="M70 120 C70 95, 85 85, 100 85 C115 85, 130 95, 130 120 Z" fill="#fbbf24" opacity="0.9"/>
+        <path d="M80 85 C75 70, 90 60, 100 65 C110 60, 125 70, 120 85 Z" fill="#d97706"/>
+        <rect x="65" y="120" width="70" height="8" rx="4" fill="#fbbf24"/>
+        <path d="M50 100 C50 65, 80 40, 100 40 C120 40, 150 65, 150 100" fill="none" stroke="#fbbf24" stroke-width="2"/>
+        <text x="100" y="148" font-family="sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">BPCAB</text>
+        <text x="100" y="165" font-family="sans-serif" font-size="9" font-weight="700" fill="#fbbf24" text-anchor="middle" letter-spacing="1">ESTD · 2019</text>
+      </svg>
+    `);
+
+    function showDefaultLogo(imgElem) { if (!imgElem) return; imgElem.onerror = null; imgElem.src = BPCAB_DEFAULT_LOGO; }
+
+    // Default Site Config Object
+    const DEFAULT_CONFIG = {
+      orgName: "Bakery & Pastry Chefs Assembly Of Bangladesh",
+      orgNameBn: "বেকারি অ্যান্ড প্যাস্ট্রি শেফস অ্যাসেম্বলি অব বাংলাদেশ",
+      shortName: "BPCAB",
+      estYear: "2019",
+      hotline: "+880 1711-234567",
+      email: "secretariat@bpcab.org.bd",
+      address: "House 42, Road 11, Block D, Banani / Gulshan-2, Dhaka 1213, Bangladesh",
+      addressBn: "বাড়ি ৪২, রোড ১১, ব্লক ডি, বনানী / গুলশান-২, ঢাকা ১২১৩, বাংলাদেশ",
+      heroTitle: "Elevating Bangladesh's Baking & Pastry Artistry",
+      heroTitleBn: "বাংলাদেশের বেকারি ও প্যাস্ট্রি শিল্পকে বিশ্বমানে রূপান্তর",
+      heroSubtitle: "Since 2019, BPCAB is the apex professional body uniting executive five-star pastry chefs, artisan sourdough bakers, cafe entrepreneurs, and home baking pioneers across Bangladesh.",
+      heroSubtitleBn: "২০১৯ সাল থেকে বাংলাদেশের শীর্ষস্থানীয় পাঁচ তারকা হোটেলের এক্সিকিউটিভ শেফ, কারিগর সাওয়ারডো বেকার এবং বেকিং উদ্যোক্তাদের জাতীয় পেশাদার প্ল্যাটফর্ম।",
+      presidentName: "Chef Kazi Anowar Hossain",
+      presidentNameBn: "শেফ কাজী আনোয়ার হোসেন",
+      presidentRole: "President, BPCAB & Executive Pastry Chef",
+      presidentRoleBn: "সভাপতি, বিপিসিএবি ও এক্সিকিউটিভ প্যাস্ট্রি শেফ",
+      presidentQuote: "“Baking is not merely a profession; it is precision, science, and a national identity.”",
+      presidentQuoteBn: "“বেকিং শুধু একটি পেশা নয়; এটি নিবিড় বিজ্ঞান, নান্দনিক শিল্প এবং একটি গর্বিত আন্তর্জাতিক পেশাদার পরিচয়।”",
+      logoUrl: "",
+      logoBgColor: "#0c1017"
+    };
+
+    let currentConfig = { ...DEFAULT_CONFIG };
+    let currentGallery = [];
+    let currentLang = 'en'; // DEFAULT IS ENGLISH
+    let activeCategory = 'All';
+
+    // Broadcast Channel for Instant Cross-Tab Communication
+    let syncChannel = null;
+    try {
+      syncChannel = new BroadcastChannel('bpcab_sync');
+      syncChannel.onmessage = function(e) {
+        if (e.data && e.data.type === 'config_update') {
+          currentConfig = { ...DEFAULT_CONFIG, ...e.data.data };
+          applyConfig();
+        } else if (e.data && e.data.type === 'gallery_update') {
+          currentGallery = e.data.data;
+          renderPublicGallery(currentGallery);
+        }
+      };
+    } catch(e) {}
+
+    // Multi-Language Strings
+    const I18N = {
+      en: {
+        ribbon: "National Assembly of Professional Pastry Chefs & Bakers · Est. 2019",
+        menuLabel: "Menu",
+        brandSub: "Bakery & Pastry Chefs Assembly Of Bangladesh",
+        applyBtn: "Apply Member",
+        navHome: "Home",
+        navAbout: "About Us",
+        navPrograms: "Masterclasses",
+        navMembership: "Membership",
+        navGallery: "Showcase",
+        navContact: "Contact",
+        dNavTitle: "Pages & Sections",
+        dLangTitle: "Select Language / ভাষা",
+        heroBtnApply: "Apply for Membership",
+        heroBtnMaster: "Explore Masterclasses",
+        heroBtnAbout: "About BPCAB →",
+        presTag: "President's Message",
+        presBody: "As the national assembly of Bangladesh's baking and pastry professionals, our primary objective is to elevate our artisans to world-class standards through certified training, modern food science, and creative innovation.",
+        aboutTag: "Our Heritage",
+        aboutTitle: "The Story & Purpose of BPCAB",
+        aboutVTitle: "Our Vision",
+        aboutVDesc: "To position Bangladesh as a recognized hub of pastry artistry and culinary craftsmanship in South Asia, where every pastry professional achieves dignity, skill certification, and global recognition.",
+        aboutMTitle: "Our Mission",
+        aboutMDesc: "To nurture homegrown talent through hands-on masterclasses, standardize hygiene & food safety across bakeries, and advocate for quality natural baking ingredients nationwide.",
+        progTag: "Executive Training",
+        progTitle: "Masterclasses & Certification",
+        memTag: "Join The Guild",
+        memTitle: "BPCAB Membership Registration",
+        lblName: "Full Name *",
+        lblPhone: "Phone / WhatsApp *",
+        lblCat: "Membership Category *",
+        lblBakery: "Bakery / Hotel Name (If applicable)",
+        submitApp: "Submit Membership Application",
+        galTag: "Culinary Artistry",
+        galTitle: "Pastry & Bakery Showcase",
+        conTag: "Secretariat Headquarters",
+        conTitle: "Contact BPCAB Secretariat",
+        lblHq: "Official Address / Location",
+        lblHotline: "Guild Hotline",
+        lblEmail: "Official Email"
+      },
+      bn: {
+        ribbon: "পেশাদার পেস্ট্রি শেফ ও বেকারদের জাতীয় পরিষদ · স্থাপিত ২০১৯",
+        menuLabel: "মেনু",
+        brandSub: "বেকারি অ্যান্ড প্যাস্ট্রি শেফস অ্যাসেম্বলি অব বাংলাদেশ",
+        applyBtn: "সদস্যপদ আবেদন",
+        navHome: "হোম",
+        navAbout: "আমাদের সম্পর্কে",
+        navPrograms: "মাস্টারক্লাস",
+        navMembership: "সদস্যপদ",
+        navGallery: "গ্যালারি",
+        navContact: "যোগাযোগ",
+        dNavTitle: "ওয়েবসাইট পেজ ও সেকশন",
+        dLangTitle: "ভাষা নির্বাচন করুন / Language",
+        heroBtnApply: "সদস্যপদ আবেদন করুন",
+        heroBtnMaster: "মাস্টারক্লাস দেখুন",
+        heroBtnAbout: "বিপিসিএবি পরিচিতি →",
+        presTag: "সভাপতির অফিশিয়াল বাণী",
+        presBody: "বাংলাদেশের পেশাদার বেকারি ও প্যাস্ট্রি শেফদের জাতীয় পরিষদ হিসেবে আমাদের মূল লক্ষ্য হলো আধুনিক কারিগরি শিক্ষা, আন্তর্জাতিক মানের খাদ্য নিরাপত্তা এবং আধুনিক পেস্ট্রি শিল্পের বিজ্ঞানভিত্তিক প্রসারের মাধ্যমে দেশের শেফদের বৈশ্বিক মানে উন্নীত করা।",
+        aboutTag: "আমাদের ঐতিহ্য",
+        aboutTitle: "বিপিসিএবি প্রতিষ্ঠার পটভূমি ও উদ্দেশ্য",
+        aboutVTitle: "আমাদের রূপকল্প (Vision)",
+        aboutVDesc: "দক্ষিণ এশিয়ায় বাংলাদেশকে প্যাস্ট্রি ও বেকারি শিল্পের অন্যতম শীর্ষস্থানীয় কেন্দ্র হিসেবে প্রতিষ্ঠিত করা, যেখানে প্রতিটি শেফ সামাজিক মর্যাদা ও আন্তর্জাতিক স্বীকৃতি লাভ করবেন।",
+        aboutMTitle: "আমাদের লক্ষ্য (Mission)",
+        aboutMDesc: "আন্তর্জাতিক মাস্টারক্লাসের মাধ্যমে দক্ষ জনশক্তি তৈরি, মানসম্মত প্রাকৃতিক উপাদান ব্যবহারে সচেতনতা সৃষ্টি এবং নিরাপদ বেকারি উৎপাদন নিশ্চিত করা।",
+        progTag: "পেশাদার প্রশিক্ষণ",
+        progTitle: "মাস্টারক্লাস ও প্রফেশনাল সার্টিফিকেশন",
+        memTag: "জাতীয় পরিষদে যুক্ত হোন",
+        memTitle: "বিপিসিএবি সদস্যপদ নিবন্ধন",
+        lblName: "আপনার পূর্ণ নাম *",
+        lblPhone: "ফোন / হোয়াটসঅ্যাপ নম্বর *",
+        lblCat: "সদস্যপদ ক্যাটাগরি *",
+        lblBakery: "প্রতিষ্ঠানের নাম (যদি থাকে)",
+        submitApp: "সদস্যপদের জন্য আবেদন জমা দিন",
+        galTag: "প্যাস্ট্রি শিল্পকলা",
+        galTitle: "প্যাস্ট্রি ও বেকিং আর্ট শোকেস",
+        conTag: "প্রধান কার্যালয়",
+        conTitle: "বিপিসিএবি সচিবালয়ের সাথে যোগাযোগ",
+        lblHq: "প্রধান কার্যালয়ের ঠিকানা",
+        lblHotline: "অফিশিয়াল হটলাইন",
+        lblEmail: "অফিসিয়াল ইমেইল"
+      }
+    };
+
+    // Apply Configuration to DOM
+    function applyConfig() {
+      // 1. Logos
+      const logoSrc = currentConfig.logoUrl || "logo.png";
+      const headerLogo = document.getElementById('header-logo');
+      const drawerLogo = document.getElementById('drawer-logo');
+      const footerLogo = document.getElementById('footer-logo');
+
+      const activeLogo = currentConfig.logoUrl || BPCAB_DEFAULT_LOGO;
+      if (headerLogo) headerLogo.src = activeLogo;
+      if (drawerLogo) drawerLogo.src = activeLogo;
+      if (footerLogo) footerLogo.src = activeLogo;
+
+      // 2. Titles & Subtitles
+      const isBn = currentLang === 'bn';
+      const orgName = (isBn && currentConfig.orgNameBn) ? currentConfig.orgNameBn : currentConfig.orgName;
+      const heroTitle = (isBn && currentConfig.heroTitleBn) ? currentConfig.heroTitleBn : currentConfig.heroTitle;
+      const heroSubtitle = (isBn && currentConfig.heroSubtitleBn) ? currentConfig.heroSubtitleBn : currentConfig.heroSubtitle;
+      const address = (isBn && currentConfig.addressBn) ? currentConfig.addressBn : currentConfig.address;
+      const presQuote = (isBn && currentConfig.presidentQuoteBn) ? currentConfig.presidentQuoteBn : currentConfig.presidentQuote;
+      const presName = (isBn && currentConfig.presidentNameBn) ? currentConfig.presidentNameBn : currentConfig.presidentName;
+
+      const brandSub = document.getElementById('txt-brand-sub');
+      if (brandSub && orgName) brandSub.textContent = orgName;
+
+      const heroTitleElem = document.getElementById('hero-title');
+      if (heroTitleElem && heroTitle) heroTitleElem.innerHTML = heroTitle;
+
+      const heroDescElem = document.getElementById('hero-desc');
+      if (heroDescElem && heroSubtitle) heroDescElem.textContent = heroSubtitle;
+
+      // 3. Contact Details
+      const hotline = currentConfig.hotline || "+880 1711-234567";
+      const email = currentConfig.email || "secretariat@bpcab.org.bd";
+
+      const drawerHotline = document.getElementById('txt-drawer-hotline');
+      if (drawerHotline) drawerHotline.textContent = hotline;
+      const drawerAddress = document.getElementById('txt-drawer-address');
+      if (drawerAddress) drawerAddress.textContent = address;
+
+      const contactAddress = document.getElementById('txt-contact-address');
+      if (contactAddress) contactAddress.textContent = address;
+      const contactHotline = document.getElementById('txt-contact-hotline');
+      if (contactHotline) contactHotline.textContent = hotline;
+      const contactEmail = document.getElementById('txt-contact-email');
+      if (contactEmail) contactEmail.textContent = email;
+
+      const footerAddress = document.getElementById('txt-footer-address');
+      if (footerAddress) footerAddress.textContent = address;
+      const footerHotline = document.getElementById('txt-footer-hotline');
+      if (footerHotline) footerHotline.textContent = "Hotline: " + hotline;
+      const footerEmail = document.getElementById('txt-footer-email');
+      if (footerEmail) footerEmail.textContent = email;
+
+      const memberHotline = document.getElementById('txt-member-hotline');
+      if (memberHotline) memberHotline.textContent = hotline;
+
+      // 4. President Box
+      const presQuoteElem = document.getElementById('txt-pres-quote');
+      if (presQuoteElem && presQuote) presQuoteElem.textContent = presQuote;
+      const presNameElem = document.getElementById('txt-pres-name');
+      if (presNameElem && presName) presNameElem.textContent = "— " + presName;
+    }
+
+    // Set Language
+    function setLanguage(lang) {
+      currentLang = lang;
+      const t = I18N[lang] || I18N.en;
+
+      document.getElementById('txt-ribbon').textContent = t.ribbon;
+      document.getElementById('txt-menu-label').textContent = t.menuLabel;
+      document.getElementById('btn-header-apply').textContent = t.applyBtn;
+
+      document.getElementById('tab-home').textContent = t.navHome;
+      document.getElementById('tab-about').textContent = t.navAbout;
+      document.getElementById('tab-programs').textContent = t.navPrograms;
+      document.getElementById('tab-membership').textContent = t.navMembership;
+      document.getElementById('tab-gallery').textContent = t.navGallery;
+      document.getElementById('tab-contact').textContent = t.navContact;
+
+      document.getElementById('txt-drawer-lang-title').textContent = t.dLangTitle;
+      document.getElementById('txt-drawer-nav-title').textContent = t.dNavTitle;
+
+      document.getElementById('nav-d-home').textContent = "🏠 " + t.navHome;
+      document.getElementById('nav-d-about').textContent = "ℹ️ " + t.navAbout;
+      document.getElementById('nav-d-programs').textContent = "📚 " + t.navPrograms;
+      document.getElementById('nav-d-membership').textContent = "📜 " + t.navMembership;
+      document.getElementById('nav-d-gallery').textContent = "🖼️ " + t.navGallery;
+      document.getElementById('nav-d-contact').textContent = "📍 " + t.navContact;
+
+      document.getElementById('hero-btn-apply').textContent = t.heroBtnApply;
+      document.getElementById('hero-btn-master').textContent = t.heroBtnMaster;
+      document.getElementById('hero-btn-about').textContent = t.heroBtnAbout;
+
+      document.getElementById('txt-pres-tag').textContent = t.presTag;
+      document.getElementById('txt-pres-body').textContent = t.presBody;
+
+      document.getElementById('about-tag').textContent = t.aboutTag;
+      document.getElementById('about-title').textContent = t.aboutTitle;
+      document.getElementById('about-v-title').textContent = t.aboutVTitle;
+      document.getElementById('about-v-desc').textContent = t.aboutVDesc;
+      document.getElementById('about-m-title').textContent = t.aboutMTitle;
+      document.getElementById('about-m-desc').textContent = t.aboutMDesc;
+
+      document.getElementById('prog-tag').textContent = t.progTag;
+      document.getElementById('prog-title').textContent = t.progTitle;
+      document.getElementById('mem-tag').textContent = t.memTag;
+      document.getElementById('mem-title').textContent = t.memTitle;
+      document.getElementById('lbl-name').textContent = t.lblName;
+      document.getElementById('lbl-phone').textContent = t.lblPhone;
+      document.getElementById('lbl-cat').textContent = t.lblCat;
+      document.getElementById('lbl-bakery').textContent = t.lblBakery;
+      document.getElementById('btn-submit-app').textContent = t.submitApp;
+
+      document.getElementById('gal-tag').textContent = t.galTag;
+      document.getElementById('gal-title').textContent = t.galTitle;
+      document.getElementById('con-tag').textContent = t.conTag;
+      document.getElementById('con-title').textContent = t.conTitle;
+      document.getElementById('lbl-hq').textContent = t.lblHq;
+      document.getElementById('lbl-hotline').textContent = t.lblHotline;
+      document.getElementById('lbl-email').textContent = t.lblEmail;
+
+      const btnEn = document.getElementById('langBtnEn');
+      const btnBn = document.getElementById('langBtnBn');
+      if (lang === 'en') {
+        btnEn.className = 'py-2.5 px-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 border bg-amber-400 text-slate-950 border-amber-300 font-extrabold shadow-md cursor-pointer';
+        btnBn.className = 'py-2.5 px-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 border bg-white/5 hover:bg-white/10 text-slate-300 border-white/10 cursor-pointer';
+      } else {
+        btnBn.className = 'py-2.5 px-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 border bg-amber-400 text-slate-950 border-amber-300 font-extrabold shadow-md cursor-pointer';
+        btnEn.className = 'py-2.5 px-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1 border bg-white/5 hover:bg-white/10 text-slate-300 border-white/10 cursor-pointer';
+      }
+
+      applyConfig();
+      renderPublicGallery(currentGallery);
+    }
+
+    // Switch Page Tab
+    function switchPage(pageId) {
+      document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById('page-' + pageId);
+      if (target) target.classList.add('active');
+
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.className = 'nav-tab px-3.5 py-2 rounded-xl transition text-slate-300 hover:text-white hover:bg-white/5';
+      });
+      const activeTab = document.getElementById('tab-' + pageId);
+      if (activeTab) {
+        activeTab.className = 'nav-tab px-3.5 py-2 rounded-xl transition bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-extrabold shadow';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Toggle 3-Dot Drawer Menu
+    function toggleMenu() {
+      const drawer = document.getElementById('drawerMenu');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    // Filter Gallery
+    function filterGallery(category) {
+      activeCategory = category;
+      document.querySelectorAll('.gal-filter-btn').forEach(btn => {
+        if (btn.textContent.trim() === category || (category === 'All' && btn.textContent.includes('All'))) {
+          btn.className = 'gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-amber-400 text-slate-950 font-extrabold shadow cursor-pointer';
+        } else {
+          btn.className = 'gal-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer';
+        }
+      });
+      renderPublicGallery(currentGallery);
+    }
+
+    // Render Public Gallery
+    function renderPublicGallery(items) {
+      const container = document.getElementById('publicGalleryGrid');
+      if (!container) return;
+      container.innerHTML = '';
+
+      let filtered = (items && items.length > 0) ? items : [];
+      if (activeCategory !== 'All') {
+        filtered = filtered.filter(item => item.category === activeCategory);
+      }
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-500">
+            <span class="text-4xl block mb-2">📷</span>
+            No creations found in this category yet.
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'group rounded-3xl overflow-hidden bg-[#14171e] border border-white/10 hover:border-amber-400/40 transition flex flex-col justify-between shadow-lg';
+        card.innerHTML = `
+          <div class="h-64 relative overflow-hidden bg-slate-900">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800'">
+            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur text-amber-300 text-[10px] font-extrabold px-3 py-1 rounded-full border border-amber-400/30">
+              ${item.category || 'Pastry'}
+            </span>
+          </div>
+          <div class="p-4 border-t border-white/10 bg-[#121620]">
+            <h4 class="font-extrabold text-white text-sm truncate">${currentLang === 'bn' && item.titleBn ? item.titleBn : item.title}</h4>
+            <p class="text-xs text-amber-400/80 mt-1 font-semibold">${item.chef || 'BPCAB Master Chef'}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Form handlers
+    function handleApply(e) {
+      e.preventDefault();
+      document.getElementById('app-success').classList.remove('hidden');
+      e.target.reset();
+    }
+
+    function handleContact(e) {
+      e.preventDefault();
+      document.getElementById('con-success').classList.remove('hidden');
+      e.target.reset();
+    }
+
+    // Initialize Site Config and Gallery
+    async function initSite() {
+      // 1. Try local storage first for instant real-time admin sync
+      try {
+        const localCfg = localStorage.getItem('bpcab_site_config');
+        if (localCfg) {
+          currentConfig = { ...DEFAULT_CONFIG, ...JSON.parse(localCfg) };
+        }
+      } catch(e) {}
+
+      // 2. Fetch config.json asynchronously
+      try {
+        const res = await fetch('config.json?t=' + Date.now());
+        if (res.ok) {
+          const fetchedCfg = await res.json();
+          // If local storage was not explicitly customized recently, merge fetched
+          currentConfig = { ...DEFAULT_CONFIG, ...fetchedCfg, ...(JSON.parse(localStorage.getItem('bpcab_site_config') || '{}')) };
+        }
+      } catch(e) {}
+
+      applyConfig();
+
+      // 3. Load Gallery
+      try {
+        const localGal = localStorage.getItem('bpcab_custom_gallery');
+        if (localGal) {
+          const parsed = JSON.parse(localGal);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            currentGallery = parsed;
+            renderPublicGallery(currentGallery);
+          }
+        }
+      } catch(e) {}
+
+      try {
+        const galRes = await fetch('gallery.json?t=' + Date.now());
+        if (galRes.ok) {
+          const galData = await galRes.json();
+          if (Array.isArray(galData) && galData.length > 0) {
+            if (!localStorage.getItem('bpcab_custom_gallery')) {
+              currentGallery = galData;
+              renderPublicGallery(currentGallery);
+            }
+          }
+        }
+      } catch(e) {}
+
+      if (currentGallery.length === 0) {
+        // Fallback default items
+        currentGallery = [
+          { title: 'Artisan French Butter Croissants', category: 'Viennoiserie', image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&auto=format&fit=crop&q=80', chef: 'Chef Kazi Mamun' },
+          { title: 'Multitiered Fondant Wedding Cake', category: 'Cake Art', image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=800&auto=format&fit=crop&q=80', chef: 'Chef Nusrat Jahan' },
+          { title: 'Natural Wild Yeast Sourdough Boule', category: 'Artisan Bread', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&auto=format&fit=crop&q=80', chef: 'Chef S. M. Farhan' },
+          { title: 'Handcrafted Bonbon Chocolatier', category: 'Chocolatier', image: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&auto=format&fit=crop&q=80', chef: 'Chef Aminul Islam' },
+          { title: 'French Strawberry Fraisier Patisserie', category: 'Patisserie', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&auto=format&fit=crop&q=80', chef: 'Chef Sonia Rahman' },
+          { title: 'Golden Pistachio Brioche Loaf', category: 'Viennoiserie', image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&auto=format&fit=crop&q=80', chef: 'Chef Tariqul Islam' }
+        ];
+        renderPublicGallery(currentGallery);
+      }
+    }
+
+    // Listen to Cross-tab Storage Events (when admin saves in another tab)
+    window.addEventListener('storage', function(e) {
+      if (e.key === 'bpcab_site_config' && e.newValue) {
+        try {
+          currentConfig = { ...DEFAULT_CONFIG, ...JSON.parse(e.newValue) };
+          applyConfig();
+        } catch(err) {}
+      } else if (e.key === 'bpcab_custom_gallery' && e.newValue) {
+        try {
+          currentGallery = JSON.parse(e.newValue);
+          renderPublicGallery(currentGallery);
+        } catch(err) {}
+      }
+    });
+
+    // Start
+    window.addEventListener('DOMContentLoaded', initSite);
+  </script>
+</body>
+</html>
